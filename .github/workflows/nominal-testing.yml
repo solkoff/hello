@@ -13,11 +13,8 @@ jobs:
         run: make
       - name: exacute action
         run: ./hello
-#     - uses: actions/upload-artifact@master
-#        with:
-#         name: hello-artifact
-#          path: hello
-      - uses: actions/download-artifact@v1
+      - uses: actions/upload-artifact@v1
         with:
-          name: my-artifact-file
-      - run: cat my-artifact-file
+          name: artifact-hello
+          path: hello
+
