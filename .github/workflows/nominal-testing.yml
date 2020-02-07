@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Build Code
-        run: ls -l && whoami
-      - name: Nominal Run
+      - name: Create a binary file
+        run: make
+      - name: 
         run: ./hello
 #     - uses: actions/upload-artifact@master
 #        with:
