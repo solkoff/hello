@@ -1,6 +1,6 @@
 name: Hello Testing
 # This workflow is triggered on pushes to the repository
-# new comment 1
+# new comment 2222
 on: [push]
 
 jobs:
@@ -11,10 +11,14 @@ jobs:
       - uses: actions/checkout@v1
       - name: Create a binary file
         run: make
-      - name: 
+      - name: exacute action
         run: ./hello
-#     - uses: actions/upload-artifact@master
-#        with:
-#         name: hello-artifact
-#          path: hello
+      - uses: actions/upload-artifact@v1
+        with:
+          name: hello-artifact
+          path: hello
+      - uses: actions/download-artifact@v1
+        with:
+          name: hello-artifact
+
 
