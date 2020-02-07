@@ -17,4 +17,9 @@ jobs:
 #        with:
 #         name: hello-artifact
 #          path: hello
+      - uses: actions/download-artifact@v1
+        with:
+          name: artifact-hello-file
+          path: /Users/metadata
 
+      - run: /Users/metadata/artifact-hello-file
